@@ -12,21 +12,27 @@
 * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 */
 
-var snowfallDiv = document.getElementById('snowfall');
+var rainfallDiv = document.getElementById('rainfall');
 
-function createSnowflakes() {
-  var flakesCount = 80; // Number of snowflakes to create
-
-  for (var i = 0; i < flakesCount; i++) {
-    var snowflake = document.createElement('div');
-    snowflake.className = 'snowflake';
-    snowflake.style.left = Math.random() * 100 + 'vw';
-    snowflake.style.animationDelay = Math.random() * 20 + 's';
-    snowfallDiv.appendChild(snowflake);
+function createRainDrops() {
+  for (var i = 0; i < 20; i++) {
+    var raindrop1 = document.createElement('div');
+    raindrop1.className = 'raindrop1';
+    raindrop1.style.left = Math.random() * 100 + 'vw';
+    raindrop1.style.animationDelay = Math.random() * 20 + 's';
+    rainfallDiv.appendChild(raindrop1);
   }
+
+  for (var i = 0; i < 10; i++) {
+    var raindrop2 = document.createElement('div');
+    raindrop2.className = 'raindrop2';
+    raindrop2.style.left = Math.random() * 100 + 'vw';
+    raindrop2.style.animationDelay = Math.random() * 20 + 's';
+    rainfallDiv.appendChild(raindrop2);
+    }
 }
 
-createSnowflakes();
+createRainDrops();
 
 // smooth scroll
 $(document).ready(function(){
@@ -86,5 +92,14 @@ document.getElementById("Goodbye").addEventListener("click", function() {
 
 function changeElementText() {
   var element = document.getElementById("seeya");
-  element.textContent = "Hẹn gặp lại nhé, Akiko.";
+  element.textContent = "Hẹn gặp lại chị nhé.";
 }
+
+document.addEventListener("DOMContentLoaded", function() {
+  var content = document.querySelector(".content");
+  content.classList.add("visible");
+
+  setTimeout(function() {
+    content.style.opacity = "1";
+  }, 0);
+});

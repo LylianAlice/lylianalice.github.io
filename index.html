@@ -1,245 +1,59 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:og="http://ogp.me/ns#">
 
-    <title>To: Dang Hong Tham</title>
-    <!-- font icons -->
+<head>
+    <meta charset="UTF-8">
+    <meta property="og:title" content="Farewell Gift" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image"
+        content="assets/imgs/farewell.jpg" />
+
+    <title>Farewell Gift</title>
+    <link rel="stylesheet" type="text/css" href="assets/css/login.css">
+
     <link rel="icon" type="image/x-icon" href="assets/imgs/favicon.ico">
 
-    <link rel="stylesheet" href="assets/vendors/themify-icons/css/themify-icons.css">
-    <!-- Bootstrap + Meyawo main styles -->
-	<link rel="stylesheet" href="assets/css/meyawo.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap" rel="stylesheet">
 </head>
-<body data-spy="scroll" data-target=".navbar" data-offset="40" id="home">
-    <div id="snowfall"></div>
-    <!-- Page Navbar -->
-    <nav class="custom-navbar" data-spy="affix" data-offset-top="20">
-        <div class="container">
-            <a id="seeya" class="logo" href="#">For my sis, Akiko.</a>
-            <ul class="nav">
-                <li class="item">
-                    <a class="link" href="#home">First Words</a>
-                </li>
-                <li class="item">
-                    <a class="link" href="#about">More Than A Goodbye</a>
-                </li>
-                <li class="item">
-                    <a class="link" href="#portfolio">You In My Eyes</a>
-                </li>
-                <li class="item">
-                    <a class="link" href="#testmonial">Best Wishes</a>
-                </li>
-            </ul>
-            <a href="javascript:void(0)" id="nav-toggle" class="hamburger hamburger--elastic">
-                <div class="hamburger-box">
-                  <div class="hamburger-inner"></div>
-                </div>
-            </a>
-        </div>          
-    </nav><!-- End of Page Navbar -->
 
-    <!-- page header -->
-    <header id="home" class="header">
-        <div class="overlay"></div>
-        <div class="header-content container">
-            <h1 class="header-title">
-                <span class="up">Chào chị,</span>
-                <span class="down">Em là Linh đây</span>
-            </h1>
-            <p style="margin: auto; text-align: center;" class="header-subtitle">Chị biết không?</p>
-            <div style="text-align: center;">
-                <button id="YES" style="top: 50%;" class="btn btn-primary"></button>
-            </div>
-        </div>              
-    </header><!-- end of page header -->
+<body>
+    <div class="container content hidden">
+        <h1>FOR 317-A12 ONLY</h1>
+        <p><em>This farewell gift is for who are about to leave the room. Login to see more.</em></p>
+        <form id="loginForm">
+            <label for="username">Username</label>
+            <input type="username" id="username" name="username" placeholder="Ex: thinhtrankhanhlinh">
 
-    <!-- about section -->
-    <section class="section" id="about">
-        <!-- container -->
-        <div class="container text-center">
-            <!-- about wrapper -->
-            <div class="about">
-                <div class="about-img-holder">
-                    <img src="assets/imgs/desk.jpg" class="about-img">
-                </div>
-                <div class="about-caption">
-                    <p class="section-subtitle">More Than A Goodbye ?</p>
-                    <h2 class="section-title mb-3">Cảm ơn vì ta đã là bạn cùng phòng</h2>
-                    <p>
-                        Lần đầu em nhìn thấy chị, chị đang ngồi trên giường xem điện thoại, quay lưng về phía cửa, tóc ngắn như con trai, tai xỏ nhiều khuyên, chân đeo một cái vòng màu đỏ. Chị chưa nói chuyện nhiều mà chỉ im lặng. Dường như là một cô gái khó gần...
-                    </p>
-                    <p>
-                        Tuy vậy, chị là một người chị tốt! Chị thường đặt cơm cho em. Chị cho em thuốc khi em bị ốm. Chị mang sào đồ vào trong khi trời đổ mưa. Chị đóng cửa vào những buổi trưa nắng. Chị chia sẻ những kinh nghiệm mình đã trải qua. Chị kể lại những câu chuyện vui, buồn trong cuộc sống và cũng lắng nghe những điều ấy từ em. Cảm ơn chị vì đã đối xử tốt với em.
-                    </p>
-                    <p>
-                        Chị là một người có gu ăn mặc, thẳng thắn, có chính kiến, ít khi đắn đo trước những lựa chọn. Chị sống hết mình với tuổi trẻ, biết tự chăm sóc cho bản thân và chăm chỉ rèn luyện sức khỏe. Em đã học hỏi được nhiều điều từ chị.
-                    </p>
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" placeholder="Written in the note">
+            <button type="reset" onclick="validate()">Submit</button>
+        </form>
+    </div>
 
-                    <p>
-                        <span style="color: white;">
-                        Sự có mặt của chị đã khiến cuộc sống em đẹp đẽ hơn.
-                        </span>
-                        <span style="font-style: italic;">(bôi đen để đọc)</span>
-                    </p>
+    <div class="popup" id="myPopupDHT">
+        <div id="myPopupContent">
+            <h2>Login Successfully</h2>
+            <p>Hello Tham. Hope you enjoy!</p>
+        </div>
+    </div>
 
-                    <!-- <button class="btn-rounded btn btn-outline-primary mt-4">Download CV</button> -->
-                </div>              
-            </div><!-- end of about wrapper -->
-        </div><!-- end of container -->
-    </section> <!-- end of about section -->
+    <div class="popup" id="myPopupHNN">
+        <div id="myPopupContent">
+            <h2>Login Successfully</h2>
+            <p>Hello Nga. Hope you enjoy!</p>
+        </div>
+    </div>    
 
+    <div class="popup" id="myPopup0">
+        <div id="myPopupContent">
+            <h2>Wrong Username or Password</h2>
+            <p>Or maybe you should not be here.</p>
+        </div>
+    </div>
 
-
-    <!-- portfolio section -->
-    <section class="section" id="portfolio">
-        <div class="container text-center">
-            <p class="section-subtitle">You In My Eyes ?</p>
-            <h6 class="section-title mb-6">Trông chị rất đáng yêu mỗi khi</h6>
-            <!-- row -->
-            <div class="row">
-                <div class="col-md-4">
-                    <a href="https://tryhsk.com/danh-muc-de-thi/de-thi-hsk-3-6" class="portfolio-card">
-                        <img src="assets/imgs/folio-1.jpg" class="portfolio-card-img">    
-                        <span class="portfolio-card-overlay">
-                            <span class="portfolio-card-caption">
-                                <h4>Học tiếng Trung</h5>
-                                <p class="font-weight-normal">Khá chăm chỉ, đôi khi lén đọc truyện</p>
-                                <p style="font-style: italic;" class="font-weight-normal">(Click để đậu HSK)</p>
-                            </span>                         
-                        </span>                     
-                    </a>
-                </div>
-                <div class="col-md-4">
-                    <a href="https://shopee.vn/L%E1%BA%A1c-%C4%90%C3%A0-Alpaca-Nh%E1%BB%93i-B%C3%B4ng-M%E1%BB%81m-M%E1%BA%A1i-D%C3%A0nh-Cho-Tr%E1%BA%BB-Em-i.690740265.23323813711?sp_atk=d5cb0c1e-10e8-424e-8246-528c54ae11bc&xptdk=d5cb0c1e-10e8-424e-8246-528c54ae11bc" class="portfolio-card">
-                        <img class="portfolio-card-img" src="assets/imgs/folio-2.jpg" class="img-responsive rounded">
-                        <span class="portfolio-card-overlay">
-                            <span class="portfolio-card-caption">
-                                <h4>Nằm bấm điện thoại</h5>
-                                <p class="font-weight-normal">Một tay gấu bông, một tay gấu trúc</p>
-                                <p style="font-style: italic;" class="font-weight-normal">(Vì vậy, chị nên mua...)</p>
-                            </span>                         
-                        </span>                         
-                    </a>
-                </div>
-                <div class="col-md-4">
-                    <a href="https://www.youtube.com/watch?v=6MVKAUFX3rI&t=1846s" class="portfolio-card">
-                        <img class="portfolio-card-img" src="assets/imgs/folio-3.jpg" class="img-responsive rounded">    
-                        <span class="portfolio-card-overlay">
-                            <span class="portfolio-card-caption">
-                                <h4>Tập thể dục</h5>
-                                <p class="font-weight-normal">Ôi, nét đẹp lao động thật là mlem!</p>
-                                <p style="font-style: italic;" class="font-weight-normal">(Một chiếc playlist phù hợp?)</p>
-                            </span>                         
-                        </span>                     
-                    </a>
-                </div>
-            </div><!-- end of row -->
-        </div><!-- end of container -->
-    </section> <!-- end of portfolio section -->
-
-
-    <!-- testimonial section -->
-    <section class="section" id="testmonial">
-        <div class="container text-center">
-            <p class="section-subtitle">Best Wishes ?</p>
-            <h6 class="section-title mb-6">Luôn có những người yêu quý chị</h6>
-
-            <!-- row -->
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="testimonial-card">
-                        <div class="testimonial-card-img-holder">
-                            <img src="assets/imgs/BeHoan.jpg" class="testimonial-card-img">                           
-                        </div>
-                        <div class="testimonial-card-body">
-                            <p class="testimonial-card-subtitle">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque doloribus autem aperiam earum nostrum omnis blanditiis corporis perspiciatis adipisci nihil.</p>
-                            <h6 class="testimonial-card-title">Bé Hoàn</h6>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="testimonial-card">
-                        <div class="testimonial-card-img-holder">
-                            <img src="assets/imgs/avatar3.jpg" class="testimonial-card-img">                        
-                        </div>
-                        <div class="testimonial-card-body">
-                            <p class="testimonial-card-subtitle">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque doloribus autem aperiam earum nostrum omnis blanditiis corporis perspiciatis adipisci nihil.</p>
-                            <h6 class="testimonial-card-title">Bé Như</h6>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="testimonial-card">
-                        <div class="testimonial-card-img-holder">
-                            <img src="assets/imgs/avatar2.jpg" class="testimonial-card-img">                           
-                        </div>
-                        <div class="testimonial-card-body">
-                            <p class="testimonial-card-subtitle">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque doloribus autem aperiam earum nostrum omnis blanditiis corporis perspiciatis adipisci nihil.</p>
-                            <h6 class="testimonial-card-title">Bé Nguyên</h6>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="testimonial-card">
-                        <div class="testimonial-card-img-holder">
-                            <img src="assets/imgs/BeLinh.jpg" class="testimonial-card-img">                        
-                        </div>
-                        <div class="testimonial-card-body">
-                            <p class="testimonial-card-subtitle">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque doloribus autem aperiam earum nostrum omnis blanditiis corporis perspiciatis adipisci nihil.</p>
-                            <h6 class="testimonial-card-title">Bé Linh</h6>
-                        </div>
-                    </div>
-                </div>
-            </div>            
-        </div> <!-- end of container -->
-    </section> <!-- end of testimonial section -->
-    
-    <audio id="audio" src="assets/SeeYouOnTime.mp3"></audio>
-    <!-- section -->
-    <section class="section-sm bg-primary">
-        <!-- container -->
-        <div class="container text-center text-sm-left">
-            <!-- row -->
-            <div class="row align-items-center">
-                <div class="col-sm offset-md-1 mb-4 mb-md-0">
-                    <h6 class="title text-light">One last thing!</h6>
-                    <p class="m-0 text-light">不要想太多，做能让你快乐的东西。</p>
-                </div>
-                <div class="col-sm offset-sm-2 offset-md-3">
-                    <a href="#home"><button onclick="changeElementText()" class="btn btn-lg my-font btn-light rounded" id="Goodbye">再见 !</button></a>
-                    
-                </div>
-            </div> <!-- end of row -->
-        </div> <!-- end of container -->
-    </section> <!-- end of section -->
-
-    <!-- footer -->
-    <div class="container">
-        <footer class="footer" style="text-align: center;">       
-            <p class="mb-0">Copyright <script>document.write(new Date().getFullYear())</script> &copy; <a href="http://www.devcrud.com">DevCRUD</a></p>
-<!--             <div class="social-links text-right m-auto ml-sm-auto">
-                <a href="javascript:void(0)" class="link"><i class="ti-facebook"></i></a>
-                <a href="javascript:void(0)" class="link"><i class="ti-google"></i></a>
-                <a href="javascript:void(0)" class="link"><i class="ti-instagram"></i></a>
-            </div> -->
-        </footer>
-    </div> <!-- end of page footer -->
-	
-	<!-- core  -->
-    <script src="https://unpkg.com/starback@2.1.1/dist/starback.global.js"></script>
-    <script src="assets/vendors/jquery/jquery-3.4.1.js"></script>
-    <script src="assets/vendors/bootstrap/bootstrap.bundle.js"></script>
-
-    <!-- bootstrap 3 affix -->
-	<script src="assets/vendors/bootstrap/bootstrap.affix.js"></script>
-
-    <!-- Meyawo js -->
-    <script src="assets/js/meyawo.js"></script>
-
+    <script src="assets/js/login.js"></script>
 </body>
+
 </html>

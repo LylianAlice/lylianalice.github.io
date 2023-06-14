@@ -11148,7 +11148,7 @@ p {
 }
 
 .mb-6 {
-  margin-bottom: 4rem !important;
+  margin-bottom: 2rem !important;
 }
 
 .img-responsive {
@@ -12125,7 +12125,7 @@ pre .code {
   -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
-  background-image: url(../imgs/header2.jpg);
+  background-image: url(../imgs/headerhnn2.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
@@ -12273,7 +12273,7 @@ pre .code {
 
 /* sections */
 .section {
-  padding: 70px 10px;
+  padding: 70px 70px;
 }
 
 .section .section-title {
@@ -12298,33 +12298,56 @@ pre .code {
   padding: 100px 0 !important;
 }
 
-#snowfall {
-  position: absolute;
+#rainfall {
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
-  pointer-events: none;
-  z-index: 9999; /* Update the z-index to a higher value */
-  overflow: hidden; /* Add overflow: hidden; to the #snowfall element */
+  height: 100vh;
+  z-index: 9999; /* Adjust the z-index value as needed to ensure the rain container is displayed on top */
+  pointer-events: none; /* This prevents raindrops from interfering with other elements */
+  overflow: hidden;
 }
 
-.snowflake {
+.raindrop1 {
   position: absolute;
   top: -20px;
   width: 20px;
   height: 20px;
-  background-image: url(../imgs/snowflake3.png);*/; /* Replace with your snowflake image */
+  background-image: url(../imgs/star2.png);
   background-repeat: no-repeat;
-  animation: snowfall 10s linear infinite;
+  animation: rainfall1 13s linear infinite;
 }
 
-@keyframes snowfall {
+.raindrop2 {
+  position: absolute;
+  top: -20px;
+  width: 20px;
+  height: 20px;
+  background-image: url(../imgs/moon.png); 
+  background-repeat: no-repeat;
+  animation: rainfall2 16s linear infinite;
+}
+
+@keyframes rainfall1 {
   0% {
-    transform: translateY(-10px); /* Adjust the starting position of snowflakes */
+    transform: translateY(-100%) rotate(0deg);
+    opacity: 0.7;
   }
   100% {
-    transform: translateY(100vh);
+    transform: translateY(100vh) rotate(750deg);
+    opacity: 0;
+  }
+}
+
+@keyframes rainfall2 {
+  0% {
+    transform: translateY(-100%) rotate(480deg);
+    opacity: 0.7;
+  }
+  100% {
+    transform: translateY(100vh) rotate(0deg);
+    opacity: 0;
   }
 }
 
@@ -12336,3 +12359,23 @@ pre .code {
   background-color: yellow;
 }
 
+body {
+  cursor: url("../imgs/shuttlecock.png"), auto;
+}
+
+button, a {
+  cursor: url("../imgs/racket.png"), auto !important;
+}
+
+.content {
+  opacity: 0;
+  transition: opacity 6s ease;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+.visible {
+  visibility: visible;
+}
