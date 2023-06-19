@@ -11148,7 +11148,7 @@ p {
 }
 
 .mb-6 {
-  margin-bottom: 4rem !important;
+  margin-bottom: 2rem !important;
 }
 
 .img-responsive {
@@ -12125,7 +12125,7 @@ pre .code {
   -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
-  background-image: url(../imgs/header2.jpg);
+  background-image: url(../imgs/headerdht.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
