@@ -15,7 +15,11 @@ function validate() {
 		myPopupT.style.display = "block";
 		myPopupT.addEventListener("click", () => {
 			myPopupT.style.display = "none";
-			window.location.href = "dht.html";
+			var htmlurl = "dht";
+			for (let i=1000; i<9999; i+=2) {
+				htmlurl += i + ".html";
+				if (CryptoJS.MD5(htmlurl) == "c84e8c145eb68a8cb109ec90a1d29907") window.location.href = htmlurl;
+			}
 		});
 	}
 
@@ -23,7 +27,11 @@ function validate() {
 		myPopupN.style.display = "block";
 		myPopupN.addEventListener("click", () => {
 			myPopupN.style.display = "none";
-			window.location.href = "hnn.html";
+			var htmlurl = "hnn";
+			for (let i=1000; i<9999; i+=2) {
+				htmlurl += i + ".html";
+				if (CryptoJS.MD5(htmlurl) == "2ee19a2351bee10325526e2a7ce70840") window.location.href = htmlurl;
+			}
 		});
 	}
 
